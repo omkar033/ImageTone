@@ -7,7 +7,8 @@ import os
 from PIL import Image
 # Set page title
 st.set_page_config(page_title="Text Recognition & Translation App", layout="wide")
-
+with open('llm.css') as f:
+    st.markdown(f'<style>{f.read()}</style>',unsafe_allow_html=True)
 # Specify the Tesseract executable path
 pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
 
